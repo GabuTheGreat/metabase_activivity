@@ -4,9 +4,7 @@ import streamlit as st
 from metabase import User
 from metabase import Metabase
 
-st.title("Metabase Actvity")
-#Load credentials 
-load_dotenv()
+st.title("Metabase Actvity"
 username = st.secrets["username"]
 password = st.secrets["password"]
 
