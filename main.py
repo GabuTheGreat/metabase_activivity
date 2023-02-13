@@ -3,19 +3,18 @@ import pandas as pd
 import streamlit as st
 from metabase import User
 from metabase import Metabase
-from dotenv import load_dotenv
 
 st.title("Metabase Actvity")
 #Load credentials 
 load_dotenv()
-username = os.environ.get('username')
-password = os.environ.get('password')
+username = st.secrets["username"]
+password = st.secrets["password"]
 
 #Get all users
 def get_all_users():
     #Log in too metabase.
     metabase = Metabase(
-    host=os.environ.get('host'),
+    host= st.secrets["host"],
     user=username,
     password=password,
     )
