@@ -4,7 +4,8 @@ import streamlit as st
 from metabase import User
 from metabase import Metabase
 
-st.title("Metabase Actvity"
+st.title("Metabase Actvity")
+
 username = st.secrets["username"]
 password = st.secrets["password"]
 
